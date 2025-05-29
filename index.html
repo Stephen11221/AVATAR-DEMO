@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AVATAR SHOP DEMO</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="bg-pink-50 text-gray-800 font-sans">
+
+  <!-- Loader -->
+  <div id="loader" class="fixed inset-0 bg-white flex items-center justify-center z-50">
+    <div class="flex flex-col items-center space-y-4">
+      <div class="w-12 h-12 border-4 border-pink-600 border-t-transparent rounded-full animate-spin"></div>
+      <p class="text-pink-600 font-medium">Loading...Demo...</p>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md px-6 py-4">
+    <div class="flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="img/logo.jpeg" alt="Logo" class="w-10 h-10 rounded-full">
+        <span class="text-2xl font-bold text-pink-600">AVATAR</span>
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex space-x-6 font-medium">
+        <a href="#home" class="hover:text-pink-600">Home</a>
+        <a href="#about" class="hover:text-pink-600">About</a>
+        <a href="#products" class="hover:text-pink-600">Products</a>
+        <a href="#contact" class="hover:text-pink-600">Contact Us</a>
+      </div>
+
+      <!-- Avatar & Cart -->
+      <div class="flex items-center space-x-4">
+        <div class="relative">
+          <span class="material-icons text-3xl text-gray-600">shopping_cart</span>
+          <span id="cart-count" class="absolute -top-1 -right-2 bg-pink-600 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">0</span>
+        </div>
+        <div class="flex items-center space-x-1">
+          <span class="material-icons text-3xl text-gray-600">account_circle</span>
+          <a href="#product" class="font-semibold">Shop</a>
+        </div>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="md:hidden ml-4">
+        <button id="menu-toggle">
+          <span class="material-icons text-3xl">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden mt-4 md:hidden flex-col space-y-2 text-gray-700 font-medium">
+      <a href="#home" class="hover:text-pink-600">Home</a> <br> <br>
+      <a href="#about" class="hover:text-pink-600">About</a> <br> <br> 
+      <a href="#products" class="hover:text-pink-600">Products</a> <br> <br>
+      <a href="#contact" class="hover:text-pink-600  ">Contact Us</a>
+    </div>
+  </nav>
+<section id="home" class="min-h-screen bg-pink-50 px-6 flex items-center">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <!-- Text -->
+    <div class="text-center md:text-left px-4">
+      <h1 class="text-4xl md:text-6xl font-extrabold text-pink-600 mb-4 leading-tight">
+        Elegant Women's Bags
+      </h1>
+      <p class="text-lg md:text-2xl text-gray-700 max-w-xl mb-8 mx-auto md:mx-0">
+        Find the perfect bag for every occasion — stylish, affordable, and crafted with care.
+      </p>
+      <a href="#products" class="inline-block bg-pink-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-pink-700 transition">
+        Shop Now
+      </a>
+    </div>
+
+    <!-- Image -->
+    <div class="px-4">
+      <img 
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" 
+        alt="Elegant women's bag" 
+        class="rounded-lg shadow-lg mx-auto md:mx-0 max-w-full h-auto"
+      >
+    </div>
+  </div>
+</section>
+
+  <!-- Home (Hero) -->
+  <section id="home" class="text-center py-10 px-4">
+    <h2 class="text-3xl md:text-4xl font-bold mb-2">Elegant Women's Bags</h2>
+    <p class="text-lg text-gray-600">Find the perfect bag for every occasion</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <img src="img/download (3).jpeg" alt="About Chic Bags" class="w-full rounded-lg shadow-md">
+    </div>
+    <div>
+      <h2 class="text-3xl font-bold text-pink-600 mb-4">About Us</h2>
+      <p class="text-gray-700 leading-relaxed">
+        At <strong>AVATAR  Bags</strong>, we specialize in providing stylish, affordable, and high-quality women's bags
+        for every occasion. From elegant evening clutches to everyday totes, our handpicked collection reflects
+        the latest fashion trends while prioritizing comfort and functionality.
+      </p>
+      <p class="text-gray-700 mt-4">
+        We are passionate about helping women express their individuality with confidence and grace. Thank you
+        for supporting our small business!
+      </p>
+    </div>
+  </section>
+
+  <section class="max-w-7xl mx-auto px-4 py-6">
+  <h2 class="text-3xl font-bold text-pink-600 mb-4 flex justify-between items-center">
+    Products
+    <span id="product-count" class="text-lg text-gray-700 font-medium"></span>
+  </h2>
+<section class="max-w-7xl mx-auto px-4 py-6">
+  <h2 class="text-3xl font-bold text-pink-600 mb-4 flex justify-between items-center">
+     <span id="product-count" class="text-lg text-gray-700 font-medium"></span>
+  </h2>
+
+  <!-- Tabs -->
+  <div class="mb-6 flex space-x-4 border-b border-pink-300">
+    <button class="tab-btn pb-2 border-b-4 border-pink-600 font-semibold text-pink-600" data-tab="bags">Women Bags</button>
+    <button class="tab-btn pb-2 border-b-4 border-transparent hover:text-pink-600" data-tab="socks">Socks</button>
+    <button class="tab-btn pb-2 border-b-4 border-transparent hover:text-pink-600" data-tab="hardbags">Hard Bags</button>
+  </div>
+
+  <!-- Products container -->
+  <div id="products">
+
+    <!-- Women Bags Tab -->
+    <div class="tab-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-content="bags">
+      <!-- Product Card 1 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col">
+        <img src="img/download (1).jpeg" alt="Elegant Leather Bag" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-lg">Elegant Leather Bag</h3>
+            <p class="text-pink-600 font-bold mt-1">ksh 1559.99</p>
+          </div>
+          <div class="mt-4 space-y-2">
+            <button onclick="addToCart('Elegant Leather Bag', 1559.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
+            <button onclick="alert('Viewing product: Elegant Leather Bag')" class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col">
+        <img src="img/download (2).jpeg" alt="Classic Handbag" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-lg">Classic Handbag</h3>
+            <p class="text-pink-600 font-bold mt-1">ksh 1249.99</p>
+          </div>
+          <div class="mt-4 space-y-2">
+            <button onclick="addToCart('Classic Handbag', 1249.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
+            <button onclick="alert('Viewing product: Classic Handbag')" class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Socks Tab -->
+    <div class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-content="socks">
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col">
+        <img src="img/sock.jpeg" alt="Cozy Winter Socks" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-lg">Cozy Winter Socks</h3>
+            <p class="text-pink-600 font-bold mt-1">ksh 299.99</p>
+          </div>
+          <div class="mt-4 space-y-2">
+            <button onclick="addToCart('Cozy Winter Socks', 299.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
+            <button onclick="alert('Viewing product: Cozy Winter Socks')" class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col">
+        <img src="img/sock1.jpeg" alt="Sporty Socks" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-lg">Sporty Socks</h3>
+            <p class="text-pink-600 font-bold mt-1">ksh 349.99</p>
+          </div>
+          <div class="mt-4 space-y-2">
+            <button onclick="addToCart('Sporty Socks', 349.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
+            <button onclick="alert('Viewing product: Sporty Socks')" class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hard Bags Tab -->
+    <div class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-content="hardbags">
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col">
+        <img src="img/download (4).jpeg" alt="Durable Hard Bag" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-lg">Durable Hard Bag</h3>
+            <p class="text-pink-600 font-bold mt-1">ksh 2599.99</p>
+          </div>
+          <div class="mt-4 space-y-2">
+            <button onclick="addToCart('Durable Hard Bag', 2599.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
+            <button onclick="alert('Viewing product: Durable Hard Bag')" class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col">
+        <img src="img/download (3).jpeg" alt="Travel Hard Case" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="font-semibold text-lg">Travel Hard Case</h3>
+            <p class="text-pink-600 font-bold mt-1">ksh 2899.99</p>
+          </div>
+          <div class="mt-4 space-y-2">
+            <button onclick="addToCart('Travel Hard Case', 2899.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
+            <button onclick="alert('Viewing product: Travel Hard Case')" class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</section>
+
+
+  <!-- Contact Us Section -->
+<section id="contact" class="bg-white py-12 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-pink-600 mb-4">Contact Us</h2>
+    <p class="text-gray-600 mb-6">Got questions or feedback? We'd love to hear from you!</p>
+
+    <form class="grid gap-6 sm:grid-cols-2 text-left">
+      <!-- Name -->
+      <div class="flex flex-col">
+        <label class="mb-1 text-sm font-medium text-gray-700 flex items-center gap-1">
+          <span class="material-icons text-pink-600">person</span> Name
+        </label>
+        <input type="text" placeholder="Your Name" class="p-3 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+      </div>
+
+      <!-- Email -->
+      <div class="flex flex-col">
+        <label class="mb-1 text-sm font-medium text-gray-700 flex items-center gap-1">
+          <span class="material-icons text-pink-600">email</span> Email
+        </label>
+        <input type="email" placeholder="you@example.com" class="p-3 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+      </div>
+
+      <!-- Phone -->
+      <div class="flex flex-col">
+        <label class="mb-1 text-sm font-medium text-gray-700 flex items-center gap-1">
+          <span class="material-icons text-pink-600">phone</span> Phone (optional)
+        </label>
+        <input type="tel" placeholder="+1234567890" class="p-3 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+      </div>
+
+      <!-- Subject -->
+      <div class="flex flex-col">
+        <label class="mb-1 text-sm font-medium text-gray-700 flex items-center gap-1">
+          <span class="material-icons text-pink-600">list</span> Subject
+        </label>
+        <select class="p-3 border rounded bg-white focus:outline-none focus:ring-2 focus:ring-pink-500">
+          <option value="">Select a topic</option>
+          <option>Order Inquiry</option>
+          <option>Product Feedback</option>
+          <option>Return/Exchange</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <!-- Message -->
+      <div class="flex flex-col sm:col-span-2">
+        <label class="mb-1 text-sm font-medium text-gray-700 flex items-center gap-1">
+          <span class="material-icons text-pink-600">chat</span> Message
+        </label>
+        <textarea rows="5" placeholder="Write your message..." class="p-3 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500"></textarea>
+      </div>
+
+      <!-- File Upload -->
+      <div class="flex flex-col sm:col-span-2">
+        <label class="mb-1 text-sm font-medium text-gray-700 flex items-center gap-1">
+          <span class="material-icons text-pink-600">attach_file</span> Attachment (optional)
+        </label>
+        <input type="file" class="p-2 border rounded focus:outline-none focus:ring-2 focus:ring-pink-500">
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="sm:col-span-2 bg-pink-600 text-white py-3 px-4 rounded hover:bg-pink-700 transition">
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="text-center bg-white py-6 mt-10 shadow-inner">
+    <p class="text-gray-500">&copy; 2025 Chic Bags. All rights reserved.</p>
+  </footer>
+
+  <!-- JS: Loader, Mobile Menu, and Cart -->
+  <script>
+    // Loader
+    window.addEventListener("load", function () {
+      document.getElementById("loader").classList.add("hidden");
+    });
+
+    // Mobile Menu Toggle
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      const menu = document.getElementById("mobile-menu");
+      menu.classList.toggle("hidden");
+    });
+
+  // Tab switching logic
+  const tabs = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+  const productCountEl = document.getElementById('product-count');
+
+  function updateProductCount() {
+    // Count visible products (not hidden)
+    const activeContent = Array.from(tabContents).find(c => !c.classList.contains('hidden'));
+    const count = activeContent ? activeContent.children.length : 0;
+    productCountEl.textContent = `(${count})`;
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.getAttribute('data-tab');
+
+      // Remove active class from all tabs
+      tabs.forEach(t => {
+        t.classList.remove('border-pink-600', 'text-pink-600', 'font-semibold');
+        t.classList.add('border-transparent');
+      });
+
+      // Hide all tab contents
+      tabContents.forEach(content => {
+        content.classList.add('hidden');
+      });
+
+      // Show target tab content
+      const activeContent = document.querySelector(`.tab-content[data-content="${target}"]`);
+      if (activeContent) activeContent.classList.remove('hidden');
+
+      // Set active tab styles
+      tab.classList.add('border-pink-600', 'text-pink-600', 'font-semibold');
+      tab.classList.remove('border-transparent');
+
+      // Update product count
+      updateProductCount();
+    });
+  });
+
+  // Initialize on page load: show first tab products and count
+  document.addEventListener('DOMContentLoaded', () => {
+    tabs[0].click();
+  });
+
+  // Dummy addToCart function for demo
+  function addToCart(name, price) {
+    alert(`Added to cart: ${name} - ksh ${price.toFixed(2)}`);
+  }
+
+  </script>
+
+</body>
+</html>
