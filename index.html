@@ -117,15 +117,11 @@
       </p>
     </div>
   </section>
-
-  <section class="max-w-7xl mx-auto px-4 py-6">
+<!-- Product Section -->
+<section class="max-w-7xl mx-auto px-4 py-6">
   <h2 class="text-3xl font-bold text-pink-600 mb-4 flex justify-between items-center">
     Products
     <span id="product-count" class="text-lg text-gray-700 font-medium"></span>
-  </h2>
-<section class="max-w-7xl mx-auto px-4 py-6">
-  <h2 class="text-3xl font-bold text-pink-600 mb-4 flex justify-between items-center">
-     <span id="product-count" class="text-lg text-gray-700 font-medium"></span>
   </h2>
 
   <!-- Tabs -->
@@ -135,122 +131,125 @@
     <button class="tab-btn pb-2 border-b-4 border-transparent hover:text-pink-600" data-tab="hardbags">Hard Bags</button>
   </div>
 
-  <!-- Products container -->
+  <!-- Product Tabs -->
   <div id="products">
 
-    <!-- Women Bags Tab -->
+    <!-- Women Bags -->
     <div class="tab-content grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-content="bags">
-      <!-- Product Card 1 -->
       <div class="bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col">
         <img src="img/download (1).jpeg" alt="Elegant Leather Bag" class="w-full h-48 object-cover rounded-t-xl">
-        <div class="p-4 flex-1 flex flex-col justify-between">
-          <div>
-            <h3 class="font-semibold text-lg">Elegant Leather Bag</h3>
-            <p class="text-pink-600 font-bold mt-1">ksh 1559.99</p>
-          </div>
+        <div class="p-4 flex flex-col justify-between flex-1">
+          <h3 class="font-semibold text-lg">Elegant Leather Bag</h3>
+          <p class="text-pink-600 font-bold mt-1">Ksh 1559</p>
           <div class="mt-4 space-y-2">
-            <button onclick="addToCart('Elegant Leather Bag', 1559.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
-            <button onclick="alert('Viewing product: Elegant Leather Bag')" class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
+            <button onclick="addToCart('Elegant Leather Bag', 1559)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
+            <button class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
           </div>
         </div>
       </div>
 
-      <!-- Product Card 2 -->
       <div class="bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col">
         <img src="img/download (2).jpeg" alt="Classic Handbag" class="w-full h-48 object-cover rounded-t-xl">
-        <div class="p-4 flex-1 flex flex-col justify-between">
-          <div>
-            <h3 class="font-semibold text-lg">Classic Handbag</h3>
-            <p class="text-pink-600 font-bold mt-1">ksh 1249.99</p>
-          </div>
+        <div class="p-4 flex flex-col justify-between flex-1">
+          <h3 class="font-semibold text-lg">Classic Handbag</h3>
+          <p class="text-pink-600 font-bold mt-1">Ksh 1249</p>
           <div class="mt-4 space-y-2">
-            <button onclick="addToCart('Classic Handbag', 1249.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
-            <button onclick="alert('Viewing product: Classic Handbag')" class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
+                      <button onclick="addToCart('Classic Handbag', 1249)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
+  <button class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
           </div>
         </div>
       </div>
-         <!-- Product Card 3 -->
+
       <div class="bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col">
-        <img src="img/download (3).jpeg" alt="Elegant Leather Bag" class="w-full h-48 object-cover rounded-t-xl">
-        <div class="p-4 flex-1 flex flex-col justify-between">
-          <div>
-            <h3 class="font-semibold text-lg">Elegant Leather Bag</h3>
-            <p class="text-pink-600 font-bold mt-1">ksh 1859.99</p>
-          </div>
+        <img src="img/download (3).jpeg" alt="Elegant Leather Bag 2" class="w-full h-48 object-cover rounded-t-xl">
+        <div class="p-4 flex flex-col justify-between flex-1">
+          <h3 class="font-semibold text-lg">Elegant Leather Bag 2</h3>
+          <p class="text-pink-600 font-bold mt-1">Ksh 1859</p>
           <div class="mt-4 space-y-2">
-            <button onclick="addToCart('Elegant Leather Bag', 1859.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
-            <button onclick="alert('Viewing product: Elegant Leather Bag')" class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
+            <button  onclick="addToCart('Elegant  Leather', 1856)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
+            <button class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Socks Tab -->
+    <!-- Socks -->
     <div class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-content="socks">
       <div class="bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col">
         <img src="img/sock.jpeg" alt="Cozy Winter Socks" class="w-full h-48 object-cover rounded-t-xl">
-        <div class="p-4 flex-1 flex flex-col justify-between">
-          <div>
-            <h3 class="font-semibold text-lg">Cozy Winter Socks</h3>
-            <p class="text-pink-600 font-bold mt-1">ksh 299.99</p>
-          </div>
+        <div class="p-4 flex flex-col justify-between flex-1">
+          <h3 class="font-semibold text-lg">Cozy Winter Socks</h3>
+          <p class="text-pink-600 font-bold mt-1">Ksh 299</p>
           <div class="mt-4 space-y-2">
-            <button onclick="addToCart('Cozy Winter Socks', 299.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
-            <button onclick="alert('Viewing product: Cozy Winter Socks')" class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
+            <button  onclick="addToCart('Cozy winter socks ', 299)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
+            <button class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
           </div>
         </div>
       </div>
 
       <div class="bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col">
         <img src="img/sock1.jpeg" alt="Sporty Socks" class="w-full h-48 object-cover rounded-t-xl">
-        <div class="p-4 flex-1 flex flex-col justify-between">
-          <div>
-            <h3 class="font-semibold text-lg">Sporty Socks</h3>
-            <p class="text-pink-600 font-bold mt-1">ksh 349.99</p>
-          </div>
+        <div class="p-4 flex flex-col justify-between flex-1">
+          <h3 class="font-semibold text-lg">Sporty Socks</h3>
+          <p class="text-pink-600 font-bold mt-1">Ksh 349</p>
           <div class="mt-4 space-y-2">
-            <button onclick="addToCart('Sporty Socks', 349.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
-            <button onclick="alert('Viewing product: Sporty Socks')" class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
+            <button onclick="addToCart('Sporty socks', 349)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
+            <button class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Hard Bags Tab -->
+    <!-- Hard Bags -->
     <div class="tab-content hidden grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" data-content="hardbags">
       <div class="bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col">
         <img src="img/download (4).jpeg" alt="Durable Hard Bag" class="w-full h-48 object-cover rounded-t-xl">
-        <div class="p-4 flex-1 flex flex-col justify-between">
-          <div>
-            <h3 class="font-semibold text-lg">Durable Hard Bag</h3>
-            <p class="text-pink-600 font-bold mt-1">ksh 2599.99</p>
-          </div>
+        <div class="p-4 flex flex-col justify-between flex-1">
+          <h3 class="font-semibold text-lg">Durable Hard Bag</h3>
+          <p class="text-pink-600 font-bold mt-1">Ksh 2599.99</p>
           <div class="mt-4 space-y-2">
             <button onclick="addToCart('Durable Hard Bag', 2599.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
-            <button onclick="alert('Viewing product: Durable Hard Bag')" class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
+            <button class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
           </div>
         </div>
       </div>
 
       <div class="bg-white rounded-xl shadow hover:shadow-lg transition flex flex-col">
         <img src="img/download (3).jpeg" alt="Travel Hard Case" class="w-full h-48 object-cover rounded-t-xl">
-        <div class="p-4 flex-1 flex flex-col justify-between">
-          <div>
-            <h3 class="font-semibold text-lg">Travel Hard Case</h3>
-            <p class="text-pink-600 font-bold mt-1">ksh 2899.99</p>
-          </div>
+        <div class="p-4 flex flex-col justify-between flex-1">
+          <h3 class="font-semibold text-lg">Travel Hard Case</h3>
+          <p class="text-pink-600 font-bold mt-1">Ksh 2899.99</p>
           <div class="mt-4 space-y-2">
-            <button onclick="addToCart('Travel Hard Case', 2899.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
-            <button onclick="alert('Viewing product: Travel Hard Case')" class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
+            <button onclick="addToCart('Travel Hard Bags', 2899.99)" class="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Add to Cart</button>
+            <button class="w-full border border-pink-600 text-pink-600 py-2 rounded hover:bg-pink-50 transition">View Product</button>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
-</section>
+<!-- Cart Sidebar -->
+<div id="cart-sidebar" class="fixed top-0 right-0 w-80 h-full bg-white shadow-xl border-l z-50 transform translate-x-full transition-transform duration-300">
+  <div class="p-4 flex justify-between items-center border-b">
+    <h2 class="text-xl font-bold text-pink-600">Your Cart</h2>
+    <button onclick="toggleCart()" class="text-gray-500 hover:text-pink-600 text-lg">&times;</button>
+  </div>
+  <div id="cart-items" class="p-4 space-y-4 overflow-y-auto h-[70%]">
+    <!-- Items will be added here -->
+  </div>
+  <div class="p-4 border-t flex flex-col gap-2">
+    <p class="font-semibold text-gray-800">Total: <span id="cart-total" class="text-pink-600">Ksh 0.00</span></p>
+    <button class="bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition">Checkout</button>
+  </div>
+</div>
+
+<!-- Floating Cart Toggle Button -->
+<button onclick="toggleCart()" class="fixed bottom-6 right-6 bg-pink-600 text-white p-3 rounded-full shadow-lg hover:bg-pink-700 z-40">
+  🛒
+</button>
+
+
 
 
   <!-- Contact Us Section -->
@@ -443,6 +442,71 @@
   function addToCart(name, price) {
     alert(`Added to cart: ${name} - ksh ${price.toFixed(2)}`);
   }
+  let cart = [];
+
+  function addToCart(productName, price) {
+    const existing = cart.find(item => item.name === productName);
+    if (existing) {
+      existing.qty += 1;
+    } else {
+      cart.push({ name: productName, price, qty: 1 });
+    }
+    renderCart();
+  }
+
+  function removeFromCart(productName) {
+    cart = cart.filter(item => item.name !== productName);
+    renderCart();
+  }
+
+  function renderCart() {
+    const cartItemsEl = document.getElementById("cart-items");
+    const cartTotalEl = document.getElementById("cart-total");
+
+    cartItemsEl.innerHTML = "";
+    let total = 0;
+
+    cart.forEach(item => {
+      total += item.price * item.qty;
+      const itemEl = document.createElement("div");
+      itemEl.className = "flex justify-between items-start border-b pb-2";
+      itemEl.innerHTML = `
+        <div>
+          <h4 class="font-semibold">${item.name}</h4>
+          <p class="text-sm text-gray-600">Ksh ${item.price.toFixed(2)} x ${item.qty}</p>
+        </div>
+        <button onclick="removeFromCart('${item.name}')" class="text-red-500 hover:text-red-700 text-sm">Remove</button>
+      `;
+      cartItemsEl.appendChild(itemEl);
+    });
+
+    cartTotalEl.textContent = "Ksh " + total.toFixed(2);
+  }
+
+  function toggleCart() {
+    const sidebar = document.getElementById("cart-sidebar");
+    sidebar.classList.toggle("translate-x-full");
+  }
+
+  // Tab Switching Logic (optional)
+  document.querySelectorAll('.tab-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const tab = button.dataset.tab;
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('border-pink-600', 'text-pink-600', 'font-semibold');
+        btn.classList.add('border-transparent');
+      });
+
+      button.classList.add('border-pink-600', 'text-pink-600', 'font-semibold');
+
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.add('hidden');
+      });
+
+      document.querySelector(`[data-content="${tab}"]`).classList.remove('hidden');
+    });
+  });
 
   </script>
 
